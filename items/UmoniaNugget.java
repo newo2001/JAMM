@@ -1,7 +1,7 @@
 packaxe newo2001.JAMM.items;
 
 import net.minecraft.items.Item
-import net.minecraft.creativetabs.creativetabs;
+import net.minecraft.creativetab.Creativetabs;
 
 public class UmoniaNugget extends Item {
 	public UmoniaNugget() {
