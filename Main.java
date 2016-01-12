@@ -43,6 +43,7 @@ public class Main {
 	public static Block blockCharger;
 	public static Item itemIngotChargedUmonia;
 	public static Block blockAssembler;
+	public static Item itemNuggetUmonia;
 	
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event) {
@@ -54,6 +55,7 @@ public class Main {
 		Charger blockCharger = new Charger();
 		ChargedUmonia itemIngotChargedUmonia = new ChargedUmonia();
 		Assembler blockAssembler = new Assembler();
+		UmoniaNugget itemNuggetUmonia = new UmoniaNugget();
 		
 		GameRegistry.registerBlock(blockOreUmonia, "blockOreUmonia");
 		GameRegistry.registerBlock(blockUmonia, "blockUmonia");
@@ -61,6 +63,7 @@ public class Main {
 		GameRegistry.registerBlock(blockCharger, "blockCharger");
 		GameRegistry.registerItem(itemIngotChargedUmonia, "itemIngotChargedUmonia");
 		GameRegistry.registerBlock(blockAssembler, "blockAssembler");
+		GameRegistry.registerItem(itemNuggetUmonia, "itemNuggetUmonia");
 	}
 	
 	@EventHandler
@@ -76,6 +79,7 @@ public class Main {
 		ItemStack stackIngotUmonia = new ItemStack(GameRegistry.findItem(MODID, "itemIngotUmonia"));
 		ItemStack stackBlockUmonia = new ItemStack(GameRegistry.findItem(MODID, "blockUmonia"));
 		ItemStack stackOreUmonia = new ItemStack(GameRegistry.findItem(MODID, "blockOreUmonia"));
+		ItemStack stackNuggetUmonia = new ItemStack(GameRegistry.findItem(MODID, "itemNuggetUmonia"));
 		
 		//Shaped recipes
 		GameRegistry.addShapedRecipe(
@@ -85,9 +89,17 @@ public class Main {
 			"xxx",
 			'x',stackIngotUmonia
 		);
+		GameRegistry.addShapedRecipe(
+			stackIngotUmonia,
+			"xxx",
+			"xxx",
+			"xxx",
+			'x',stackNuggetUmonia
+		);
 		
 		//Shapeless recipes
 		GameRegistry.addShapelessRecipe(new ItemStack(GameRegistry.findItem(MODID, "itemIngotUmonia"), 9), stackBlockUmonia);
+		GameRegistry.addShapelessRecipe(new ItemStack(GameRegistry.findItem(MODID, "itemNuggetUmonia"), 9), stackIngotUmonia);
 		
 		//Smelting recipes
 		GameRegistry.addSmelting(stackOreUmonia, stackIngotUmonia, 2.0f);
