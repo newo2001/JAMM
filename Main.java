@@ -44,6 +44,10 @@ public class Main {
 	public static Item itemIngotChargedUmonia;
 	public static Block blockAssembler;
 	public static Item itemNuggetUmonia;
+	public static Block blockOreSome;
+	public static Item itemIngotSome;
+	public static Item itemNuggetSome;
+	public static Block blockSome;
 	
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event) {
@@ -56,6 +60,10 @@ public class Main {
 		ChargedUmonia itemIngotChargedUmonia = new ChargedUmonia();
 		Assembler blockAssembler = new Assembler();
 		UmoniaNugget itemNuggetUmonia = new UmoniaNugget();
+		SomeOre blockOreSome = new SomeOre();
+		SomeIngot itemIngotSome = new SomeIngot();
+		SomeNugget itemNuggetSome = new SomeNugget();
+		SomeBlock blockSome = new SomeBlock();
 		
 		GameRegistry.registerBlock(blockOreUmonia, "blockOreUmonia");
 		GameRegistry.registerBlock(blockUmonia, "blockUmonia");
@@ -64,6 +72,10 @@ public class Main {
 		GameRegistry.registerItem(itemIngotChargedUmonia, "itemIngotChargedUmonia");
 		GameRegistry.registerBlock(blockAssembler, "blockAssembler");
 		GameRegistry.registerItem(itemNuggetUmonia, "itemNuggetUmonia");
+		GameRegistry.registerBlock(blockOreSome, "blockOreSome");
+		GameRegistry.registerItem(itemIngotSome, "itemIngotSome");
+		GameRegistry.registerItem(itemNuggetSome, "itemNuggetSome");
+		GameRegistry.registerBlock(blockSome, "blockSome");
 	}
 	
 	@EventHandler
@@ -80,6 +92,10 @@ public class Main {
 		ItemStack stackBlockUmonia = new ItemStack(GameRegistry.findItem(MODID, "blockUmonia"));
 		ItemStack stackOreUmonia = new ItemStack(GameRegistry.findItem(MODID, "blockOreUmonia"));
 		ItemStack stackNuggetUmonia = new ItemStack(GameRegistry.findItem(MODID, "itemNuggetUmonia"));
+		ItemStack stackBlockSome = new ItemStack(GameRegistry.findItem(MODID, "blockSome"));
+		ItemStack stackIngotSome = new ItemStack(GameRegistry.findItem(MODID, "itemIngotSome"));
+		ItemStack stackNuggetSome = new ItemStack(GameRegistry.findItem(MODID, "itemNuggetSome"));
+		ItemStack stackOreSome = new ItemStack(GameRegistry.findItem(MODID, "blockOreSome"));
 		
 		//Shaped recipes
 		GameRegistry.addShapedRecipe(
