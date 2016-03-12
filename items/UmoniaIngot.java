@@ -6,8 +6,8 @@ import net.minecraft.item.Item;
 public class UmoniaIngot extends Item {
 	public UmoniaIngot() {
 		maxStackSize = 64;
-		setTextureName("JAMM:itemIngotUmonia");
-		setUnlocalizedName("itemIngotUmonia");
+		setTextureName("JAMM:umonia_ingot");
+		setUnlocalizedName("umonia_ingot");
 		setCreativeTab(CreativeTabs.tabMaterials);
 	}
 }

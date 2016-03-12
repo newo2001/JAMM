@@ -3,11 +3,11 @@ package newo2001.JAMM.items;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class ChargedUmonia extends Item {
-	public ChargedUmonia() {
+public class UnstableUmoniaIngot extends Item {
+	public UnstableUmoniaIngot() {
 		maxStackSize = 64;
-		setTextureName("JAMM:charged_umonia_ingot");
-		setUnlocalizedName("charged_umonia_ingot");
+		setUnlocalizedName("unstable_umonia_ingot");
+		setTextureName("JAMM:unstable_umonia_ingot");
 		setCreativeTab(CreativeTabs.tabMaterials);
 	}
 }

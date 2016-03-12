@@ -7,17 +7,17 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.util.ForgeDirection;
-import newo2001.JAMM.container.ContainerCharger;
-import newo2001.JAMM.tileentities.TileEntityCharger;
+import newo2001.JAMM.container.ContainerCutter;
+import newo2001.JAMM.tileentities.TileEntityCutter;
 
 import org.lwjgl.opengl.GL11;
 
-public class GuiCharger extends GuiContainer {
+public class GuiCutter extends GuiContainer {
 	private IInventory playerInv;
-	private TileEntityCharger te;
+	private TileEntityCutter te;
 
-	public GuiCharger(IInventory playerInv, TileEntityCharger te) {
-		super(new ContainerCharger(playerInv, te));
+	public GuiCutter(IInventory playerInv, TileEntityCutter te) {
+		super(new ContainerCutter(playerInv, te));
 
 		this.playerInv = playerInv;
 		this.te = te;
@@ -47,8 +47,8 @@ public class GuiCharger extends GuiContainer {
 		if (mouseX > this.xSize - 22 + k && mouseX < this.xSize - 8 + k) {
 			if (mouseY > 7 + l && mouseY < 65 + l) {
 				List list = new ArrayList();
-				if (te.getEnergizeTime() > 0) {
-					list.add("Progress: " + (int) (te.getProgress() / (float) (te.getEnergizeTime() / 100f)) + "%");
+				if (te.getCutTime() > 0) {
+					list.add("Progress: " + (int) (te.getProgress() / (float) (te.getCutTime() / 100f)) + "%");
 				} else
 					list.add("Progress: 0%");
 				this.drawHoveringText(list, (int) mouseX - k, (int) mouseY - l, fontRendererObj);
@@ -59,7 +59,7 @@ public class GuiCharger extends GuiContainer {
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-		this.mc.getTextureManager().bindTexture(new ResourceLocation("JAMM:textures/gui/container/tileEntityCharger.png"));
+		this.mc.getTextureManager().bindTexture(new ResourceLocation("JAMM:textures/gui/container/tileEntityCutter.png"));
 		this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
 		this.drawTexturedModalRect(this.guiLeft + 9, this.guiTop + 65 - te.getPixelsEnergyBar(), 177, 3, 13, te.getPixelsEnergyBar());
 		this.drawTexturedModalRect(this.guiLeft + 155, this.guiTop + 65 - te.getPixelsProgressBar(), 191, 3, 13, te.getPixelsProgressBar());

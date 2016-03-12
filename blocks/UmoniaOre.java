@@ -7,8 +7,8 @@ import net.minecraft.creativetab.CreativeTabs;
 public class UmoniaOre extends Block {
 	public UmoniaOre() {
 		super(Material.rock);
-		setBlockName("blockOreUmonia");
-		setBlockTextureName("JAMM:blockOreUmonia");
+		setBlockName("umonia_ore");
+		setBlockTextureName("JAMM:umonia_ore");
 		setHardness(4.0f);
 		setResistance(15.0f);
 		setHarvestLevel("pickaxe", 3);

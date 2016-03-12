@@ -1,13 +1,13 @@
-packaxe newo2001.JAMM.items;
+package newo2001.JAMM.items;
 
-import net.minecraft.items.Item
-import net.minecraft.creativetab.Creativetabs;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 public class UmoniaNugget extends Item {
 	public UmoniaNugget() {
 		maxStackSize = 64;
-		setTextureName("JAMM:itemNuggetUmonia");
-		setUnlocalizedName("itemNuggetUmonia");
+		setTextureName("JAMM:umonia_nugget");
+		setUnlocalizedName("umonia_nugget");
 		setCreativeTab(CreativeTabs.tabMaterials);
 	}
 }
